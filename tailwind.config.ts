@@ -53,7 +53,7 @@ export default {
   		},
   		fontFamily: {
   			dancing: [
-  				'var(--font-dancing-script)'
+  				'var(--font-indie-script)'
   			],
   			indie: [
   				'var(--font-indie-flower)'

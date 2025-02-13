@@ -4,7 +4,7 @@ import {Dancing_Script, Indie_Flower} from 'next/font/google';
 
 const dancing = Dancing_Script({
     subsets: ['latin'],
-    variable: '--font-dancing-script',
+    variable: '--font-indie-script',
     display: 'swap',
 });
 

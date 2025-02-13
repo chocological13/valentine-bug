@@ -12,7 +12,7 @@ interface GameStageProps {
 export const BugCatcher = ({ score, bugs, hearts, onCatchBug }: GameStageProps) => {
     return (
         <Card className="w-full max-w-2xl h-[400px] relative border-2 border-pink-300 bg-white/90">
-            <div className="absolute top-2 left-2 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-dancing">
+            <div className="absolute top-2 left-2 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-indie">
                 Score: {score}/5
             </div>
 

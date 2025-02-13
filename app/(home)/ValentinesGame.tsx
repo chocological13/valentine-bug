@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 import {GameState} from "@/types/types";
 import WelcomeStage from "@/app/(home)/_components/WelcomeStage";
 import DebuggingStage from "@/app/(home)/_components/DebuggingStage";
+import SuccessStage from "@/app/(home)/_components/SuccessStage";
+import FinalStage from "@/app/(home)/_components/FinalStage";
 import {BugCatcher} from "@/app/(home)/_components/BugCatcher";
 import {useGameLogic} from "@/hooks/useGameLogic";
 
@@ -40,6 +42,16 @@ const ValentinesGame = () => {
         setGameState(prev => ({...prev, stage}));
     };
 
+    const resetStage = () => {
+        setIsDebugging(false);
+        setGameState({
+            stage: 0,
+            score: 0,
+            isDebugging: false,
+            isMuted: false,
+        });
+        resetGame();
+    }
 
     const renderStage = () => {
         switch (gameState.stage) {
@@ -47,6 +59,10 @@ const ValentinesGame = () => {
                 return <WelcomeStage onStart={onStartGame}/>
             case 1:
                 return <DebuggingStage startDebugging={startDebugging}/>
+            case 2:
+                return <SuccessStage onClick={() => setGameState(prev => ({...prev, stage: 3}))}/>
+            default:
+                return <FinalStage reset={() => resetStage()}/>
         }
     }
 
