@@ -1,10 +1,17 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Bug, Heart } from '@/types/types';
+import {useGameSounds} from "@/hooks/useGameSounds";
 
-export const useGameLogic = (isDebugging: boolean) => {
+interface GameLogicProps {
+    isDebugging: boolean;
+    isMuted: boolean;
+}
+
+export const useGameLogic = ({isDebugging, isMuted} : GameLogicProps) => {
     const [bugs, setBugs] = useState<Bug[]>([]);
     const [hearts, setHearts] = useState<Heart[]>([]);
     const [score, setScore] = useState(0);
+    const {playPop} = useGameSounds(isMuted)
 
     // Generate bugs
     useEffect(() => {
@@ -41,6 +48,7 @@ export const useGameLogic = (isDebugging: boolean) => {
     const catchBug = useCallback((bugId: number) => {
         setBugs(prev => prev.filter(bug => bug.id !== bugId));
         setScore(prev => prev + 1);
+        playPop();
 
         // Add heart animation
         const newHeart = {
@@ -52,7 +60,7 @@ export const useGameLogic = (isDebugging: boolean) => {
         setTimeout(() => {
             setHearts(prev => prev.filter(heart => heart.id !== newHeart.id));
         }, 1000);
-    }, []);
+    }, [playPop]);
 
     const resetGame = () => {
         setScore(0);
