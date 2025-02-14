@@ -36,7 +36,7 @@ const ValentinesGame = () => {
             const newScore = prev.score + 1;
             if (newScore >= 5) {
                 playSuccess();
-                setDebugging(false);
+                setTimeout(() => setDebugging(false), 1000)
                 setStage(2);
             }
             return { ...prev, score: newScore };

@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
-import type { Bug, Heart } from '@/types/types';
+import {useCallback, useEffect, useState} from 'react';
+import type {Bug, Heart} from '@/types/types';
 import {useGameSounds} from "@/hooks/useGameSounds";
 
 interface GameLogicProps {
@@ -46,9 +46,9 @@ export const useGameLogic = ({isDebugging, isMuted} : GameLogicProps) => {
     }, [isDebugging]);
 
     const catchBug = useCallback((bugId: number) => {
+        playPop();
         setBugs(prev => prev.filter(bug => bug.id !== bugId));
         setScore(prev => prev + 1);
-        playPop();
 
         // Add heart animation
         const newHeart = {
