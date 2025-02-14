@@ -3,14 +3,22 @@ export const gameMessages = {
         "Found a bug in my code. Help debug? 🐞",
         "Critical error in feelings.js needs fixing 😵",
         "git commit -m 'Something special' 👀",
-        "System needs your expertise 🥺"
+        "System needs your expertise, senpai 🥺"
+    ],
+
+    debugButtons: [
+        "Start Debugging 💘",
+        "I Need Your Help >.< 💖",
+        "Fix it Please, Honey 🍯",
+        "Let’s Debug Together ❤️",
+        "Debug it Like You'd Debug Me 💗"
     ],
 
     codePuzzle: `const feelings = {
   status: "loading...",
   cache: "your smile",
   priority: 1,
-  type: "special"
+  type: "preciousssss"
   createdAt: new Date(firstMet),
 };`,
     debugging: {
@@ -78,17 +86,17 @@ export const gameMessages = {
             [
                 "Status: Compilation successful",
                 "Return value: Infinite love",
-                "Debug result: Perfect match found!"
+                "Debug result: Perfect match found! ✅"
             ],
             [
                 "npm install @your/heart --save",
                 "Adding to dependencies...",
-                "Package 'love' installed successfully!"
+                "Package 'love' installed successfully! 🩷"
             ],
             [
                 "git commit -m 'Found the one'",
                 "git push origin main",
-                "Deployment to heart successful!"
+                "Deployment to heart successful! 🚀"
             ],
             [
                 "Running final tests...",
@@ -125,7 +133,6 @@ export const gameMessages = {
         "Merge request: You + Me?"
     ],
 
-    // For the code display
     loveCode: `function valentine() {
   const you = special.person;
   const me = heart.owner;
@@ -135,7 +142,6 @@ export const gameMessages = {
   }
 }`,
 
-    // For the success stage
     completionMessage: [
         "Deployment successful",
         "All systems operational",
@@ -143,11 +149,3 @@ export const gameMessages = {
         "Perfect sync achieved"
     ]
 };
-
-// You can also have some fun error messages
-export const errorMessages = [
-    "Error 404: Resistance futile",
-    "Warning: Charm overflow",
-    "Exception: Too awesome to handle",
-    "Status: Happily debugged"
-];
