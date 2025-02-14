@@ -1,6 +1,5 @@
 import React from 'react';
 import {Card} from "@/components/ui/card";
-import {HeartDoodle} from "@/components/decorative/Doodles";
 import {Terminal} from "lucide-react";
 import {Button} from "@/components/ui/button";
 

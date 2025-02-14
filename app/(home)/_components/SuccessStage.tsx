@@ -16,7 +16,7 @@ const SuccessStage: React.FC<FixedStageProps> = ({onClick}) => {
                 Now I can properly express my feelings...
             </p>
             <div className="space-y-4">
-                <p className="text-3xl text-pink-500 font-indie">
+                <p className="text-3xl text-pink-500 font-bold font-indie mt-6">
                     Will you be my Valentine?
                 </p>
                 <div className="flex justify-center gap-4">
