@@ -22,7 +22,7 @@ const WelcomeStage: React.FC<WelcomeStageProps> = ({onStart}) => {
 
     return (
         <Card className="p-8 bg-white/90 backdrop-blur-sm flex flex-col items-center">
-            <h1 className="text-4xl font-indie text-pink-600 mb-8 relative">
+            <h1 className="text-4xl font-indie text-pink-600 mb-8 relative text-center">
                 {displayText}
                 {!isComplete && <span className="animate-pulse">|</span>}
             </h1>

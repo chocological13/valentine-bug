@@ -40,7 +40,7 @@ const DebuggingStage: React.FC<DebuggingStageProps> = ({startDebugging} : Debugg
                 <div className="bg-gray-900 p-4 rounded-lg text-pink-300 font-indie text-base">
                     <pre className="whitespace-pre-wrap break-words">{gameMessages.codePuzzle}</pre>
                 </div>
-                <h2 className="text-2xl text-pink-600 font-indie min-h-[2rem]">
+                <h2 className="text-2xl text-pink-600 font-indie min-h-[2rem] text-center">
                     {titleText}
                     {!isTitleComplete && <span className="animate-pulse">|</span>}
                 </h2>
